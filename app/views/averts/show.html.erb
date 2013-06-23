@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @avert.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @avert.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_avert_path(@avert) %> |
+<%= link_to 'Back', averts_path %>

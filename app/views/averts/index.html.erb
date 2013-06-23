@@ -1,0 +1,25 @@
+<h1>Listing averts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @averts.each do |avert| %>
+  <tr>
+    <td><%= avert.name %></td>
+    <td><%= avert.description %></td>
+    <td><%= link_to 'Show', avert %></td>
+    <td><%= link_to 'Edit', edit_avert_path(avert) %></td>
+    <td><%= link_to 'Destroy', avert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Avert', new_avert_path %>
